@@ -7,7 +7,7 @@
 [![Curso](https://img.shields.io/badge/CC3067-Redes-006B54?style=for-the-badge)](#)
 [![Universidad](https://img.shields.io/badge/UVG-Semestre_II_2026-B48A2C?style=for-the-badge)](#)
 [![Wireshark](https://img.shields.io/badge/Wireshark-4.6.7-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)](https://www.wireshark.org/)
-[![Estado](https://img.shields.io/badge/Estado-Incisos_3.1--3.5_completados-2EA44F?style=for-the-badge)](#estado-del-laboratorio)
+[![Estado](https://img.shields.io/badge/Estado-Laboratorio_completo-2EA44F?style=for-the-badge)](#estado-del-laboratorio)
 
 **Universidad del Valle de Guatemala**  
 Facultad de Ingeniería · Departamento de Ciencias de la Computación
@@ -16,7 +16,7 @@ Facultad de Ingeniería · Departamento de Ciencias de la Computación
 
 ---
 
-## 📋 Descripción
+## Descripción
 
 Este repositorio documenta el **Laboratorio 1 del curso CC3067 Redes**. La práctica estudia la comunicación desde dos perspectivas complementarias:
 
@@ -26,7 +26,7 @@ Este repositorio documenta el **Laboratorio 1 del curso CC3067 Redes**. La prác
 La actividad muestra que toda comunicación necesita reglas compartidas para representar datos, delimitar mensajes, identificar origen y destino, administrar esperas, confirmar entregas y recuperarse de errores.
 
 > [!IMPORTANT]
-> Este README documenta los incisos **3.1 al 3.5**, que ya fueron realizados y cuentan con evidencia. El análisis HTTP del inciso **3.6** queda pendiente y no se incluyen resultados inventados.
+> Este README documenta los incisos **3.1 al 3.6**. El análisis HTTP se completó con una captura real realizada desde la interfaz Wi‑Fi; las respuestas reportadas provienen directamente de los encabezados observados en Wireshark.
 
 ---
 
@@ -36,12 +36,12 @@ La actividad muestra que toda comunicación necesita reglas compartidas para rep
 |---|:---:|---|
 | **Pablo Daniel Barillas Moreno** | **22193** | Pareja responsable · Cliente 1 · Informe individual |
 | **Rafael Andres Chivalan** | **21534** | Pareja responsable · Conmutador |
-| **Renato Rojas** | No proporcionado | Pareja colaboradora · Cliente 2 |
-| **Melisa Mendizabal** | No proporcionado | Pareja colaboradora · Cliente 3 |
+| **Renato Rojas** | --- | Pareja colaboradora · Cliente 2 |
+| **Melisa Mendizabal** | --- | Pareja colaboradora · Cliente 3 |
 
 ---
 
-## 📊 Resultados principales
+## Resultados principales
 
 | Indicador | Resultado | Interpretación |
 |---|:---:|---|
@@ -51,6 +51,9 @@ La actividad muestra que toda comunicación necesita reglas compartidas para rep
 | Paquetes SYN encontrados | **4 de 651** | Aproximadamente 0.61 % de la traza |
 | Tamaño por archivo de captura | **5 MB** | Rotación automática mediante búfer circular |
 | Archivos conservados | **10** | Se mantuvieron únicamente los diez más recientes |
+| Versión HTTP del navegador | **HTTP/1.1** | Visible en la solicitud `GET` |
+| Versión HTTP del servidor | **HTTP/1.1** | Visible en la respuesta `200 OK` |
+| Contenido devuelto | **81 bytes** | Valor del encabezado `Content-Length` |
 
 ### Hallazgo general
 
@@ -60,9 +63,8 @@ El código **Morse** resultó más sencillo y confiable para los participantes. 
 
 ### Documentos preparados
 
-- 📘 [Reporte grupal — incisos 3.1 a 3.3](./docx/Reporte_Grupal_Laboratorio_1_Redes.docx)
-- 📗 [Informe individual — incisos 3.4 y 3.5](./docx/Informe_Individual_Laboratorio_1_Incisos_3_4_y_3_5_Pablo_Barillas.docx)
-- 🗜️ [Paquete ZIP con las 13 evidencias](./Evidencias_Laboratorio_1_22193.zip)
+- 📘 [Reporte grupal — incisos 3.1 a 3.3](Laboratorio-1_Esquemas-de-comunicacion_RDC_Sec-10/Primera-parte_Esquemas-de-comunicación/Reporte/Reporte_Grupal_Laboratorio_1_Redes.pdf)
+- 📗 [Informe individual completo — incisos 3.4 a 3.6](Laboratorio-1_Esquemas-de-comunicacion_RDC_Sec-10/Segunda-parte_Introducción-a-Wireshark/reporte/Informe_Individual_Laboratorio_1_Incisos_3_4_a_3_6_Pablo_Barillas.pdf)
 
 ---
 
@@ -123,7 +125,7 @@ Las conversiones completas de los seis mensajes se encuentran en el **reporte gr
 
 ---
 
-## 3.2 📦 Transmisión empaquetada
+## 3.2 Transmisión empaquetada
 
 Para representar un mensaje como una unidad completa se utilizaron **notas de voz de WhatsApp** codificadas en Morse. En lugar de transmitir y corregir en tiempo real, el emisor primero grababa el contenido y luego enviaba el archivo completo.
 
@@ -165,7 +167,7 @@ La actividad representó propiedades similares a las de un paquete: **encapsulac
 
 ---
 
-## 3.3 🔀 Conmutación de mensajes
+## 3.3 Conmutación de mensajes
 
 Se agregó un conmutador central para recibir, ordenar y reenviar las notas de voz. Los clientes ya no enviaban directamente al destinatario: toda comunicación pasaba primero por el conmutador.
 
@@ -223,7 +225,7 @@ ID: M01 | ORIGEN: C1 | DESTINO: C3 | LONGITUD: 18
 
 # Segunda parte — Introducción a Wireshark
 
-## 🧰 Requisitos
+## Requisitos
 
 - Microsoft Windows.
 - Wireshark **4.6.7**.
@@ -233,7 +235,7 @@ ID: M01 | ORIGEN: C1 | DESTINO: C3 | LONGITUD: 18
 
 ---
 
-## 3.4 🎨 Personalización del entorno
+## 3.4 Personalización del entorno
 
 Se creó el perfil **Pablo Barillas** y se abrió la traza proporcionada, la cual contiene **651 paquetes**.
 
@@ -289,7 +291,7 @@ Las interfaces físicas **Wi‑Fi** y **Ethernet** permanecieron visibles. Wi‑
 
 ---
 
-## 3.5 💾 Captura con búfer circular
+## 3.5 Captura con búfer circular
 
 ### Revisión de red
 
@@ -341,7 +343,91 @@ Se generaron suficientes paquetes para activar la rotación. La carpeta terminó
 
 ---
 
-## 🧠 Aprendizajes
+## 3.6 Análisis de paquetes HTTP
+
+Se inició una captura sin filtro en la interfaz Wi‑Fi y se accedió a:
+
+```text
+http://gaia.cs.umass.edu/wireshark-labs/INTRO-wireshark-file1.html
+```
+
+Después de cargar la página se detuvo la captura y se aplicaron los filtros de visualización:
+
+```text
+http
+```
+
+```text
+http.request || http.response
+```
+
+Ambas expresiones dejaron visibles cuatro mensajes HTTP: la solicitud `GET` del documento, la respuesta `200 OK`, una solicitud automática del icono `favicon.ico` y una respuesta `301 Moved Permanently` para ese recurso secundario.
+
+<p align="center">
+  <img src="./evidencias_lab1_22193/14_Filtro_HTTP_mensajes.png" width="92%" alt="Filtro HTTP mostrando las solicitudes y respuestas capturadas">
+</p>
+
+### Intercambio principal
+
+```mermaid
+sequenceDiagram
+    participant C as Navegador 192.168.0.6
+    participant S as Servidor 128.119.245.12
+    C->>S: GET /wireshark-labs/INTRO-wireshark-file1.html HTTP/1.1
+    S-->>C: HTTP/1.1 200 OK
+    Note over S,C: Content-Type: text/html · Content-Length: 81
+```
+
+### Respuestas obtenidas
+
+| Pregunta | Evidencia observada | Respuesta |
+|---|---|---|
+| Versión utilizada por el navegador | Línea de solicitud `GET ... HTTP/1.1` | **HTTP/1.1** |
+| Versión utilizada por el servidor | Línea de estado `HTTP/1.1 200 OK` | **HTTP/1.1** |
+| Lenguajes aceptados | Encabezado `Accept-Language` | **`es-419,es;q=0.9`** |
+| Bytes de contenido devueltos | `Content-Length: 81` y `File Data: 81 bytes` | **81 bytes** |
+
+`es-419` indica español de Latinoamérica y el valor `es;q=0.9` indica que el español genérico también es aceptado con una preferencia relativa de 0.9.
+
+<p align="center">
+  <img src="./evidencias_lab1_22193/18_Accept_Language.png" width="92%" alt="Encabezado Accept-Language con el valor es-419 y español con prioridad 0.9">
+</p>
+
+<p align="center">
+  <img src="./evidencias_lab1_22193/19_Content_Length_81_bytes.png" width="92%" alt="Encabezado Content-Length con 81 bytes">
+</p>
+
+### Análisis de rendimiento y puntos de captura
+
+Ante una descarga lenta conviene capturar paquetes en más de un punto para poder comparar tiempos y localizar el tramo problemático:
+
+1. **Equipo cliente:** permite medir resolución DNS, establecimiento TCP, envío del `GET`, llegada de la respuesta y posibles retransmisiones.
+2. **Puerta de enlace, router o firewall:** ayuda a detectar pérdida, colas, latencia, traducción NAT o políticas de seguridad.
+3. **Enlace de acceso o equipo intermedio administrable:** mediante un puerto espejo `SPAN` o un TAP se puede observar el tráfico sin depender de un solo extremo.
+4. **Servidor:** permite comprobar cuándo llegó la solicitud y cuándo comenzó a salir la respuesta.
+
+Instalar la interfaz gráfica completa de Wireshark en un servidor de producción **no siempre es conveniente**. Requiere privilegios elevados, puede consumir recursos y una captura podría contener información sensible. Cuando es necesario observar el servidor, es preferible usar `dumpcap`, `tshark` o `tcpdump`, limitar la duración y el tamaño de la captura y analizar posteriormente el archivo en una estación de trabajo. La comparación entre las capturas del cliente y del servidor permite determinar si el retraso pertenece a la aplicación, al sistema operativo o a la red.
+
+### Evidencias adicionales
+
+<p align="center">
+  <img src="./evidencias_lab1_22193/15_Filtro_HTTP_request_response.png" width="92%" alt="Filtro http.request o http.response aplicado">
+</p>
+
+<p align="center">
+  <img src="./evidencias_lab1_22193/16_Solicitud_HTTP_version.png" width="92%" alt="Solicitud HTTP expandida con Request Version HTTP 1.1">
+</p>
+
+<p align="center">
+  <img src="./evidencias_lab1_22193/17_Respuesta_HTTP_200_OK.png" width="92%" alt="Respuesta HTTP 200 OK expandida">
+</p>
+
+> [!NOTE]
+> La solicitud de `favicon.ico` fue generada automáticamente por el navegador después de cargar el documento. No debe confundirse con la solicitud principal de `INTRO-wireshark-file1.html`; la respuesta `200 OK` y los 81 bytes corresponden al documento solicitado.
+
+---
+
+## Aprendizajes
 
 - Un código compartido no es suficiente: también se necesitan delimitación y sincronización.
 - Los mensajes empaquetados pueden almacenarse y retransmitirse, pero introducen espera.
@@ -350,10 +436,12 @@ Se generaron suficientes paquetes para activar la rotación. La carpeta terminó
 - `tcp.len` no representa el tamaño total de la trama, sino la carga útil TCP.
 - La selección correcta de la interfaz determina qué tráfico puede observarse.
 - Un búfer circular controla el uso de almacenamiento durante capturas prolongadas.
+- Los encabezados HTTP permiten conocer la versión del protocolo, preferencias del cliente y tamaño del contenido.
+- Comparar capturas en el cliente y el servidor ayuda a separar demoras de aplicación, sistema operativo y red.
 
 ---
 
-## 📚 Referencias
+## Referencias
 
 1. Universidad del Valle de Guatemala. *Laboratorio 1 — Esquemas de comunicación e introducción a Wireshark*. CC3067 Redes, 2026.
 2. [Wireshark User’s Guide](https://www.wireshark.org/docs/wsug_html_chunked/).
@@ -361,6 +449,7 @@ Se generaron suficientes paquetes para activar la rotación. La carpeta terminó
 4. [Microsoft Learn — ipconfig](https://learn.microsoft.com/windows-server/administration/windows-commands/ipconfig).
 5. International Telecommunication Union. *Recommendation ITU-R M.1677-1: International Morse code*.
 6. International Telecommunication Union. *Recommendation ITU-T S.1: International Telegraph Alphabet No. 2*.
+7. [Kurose y Ross — Wireshark Labs](https://gaia.cs.umass.edu/kurose_ross/wireshark.php).
 
 ---
 

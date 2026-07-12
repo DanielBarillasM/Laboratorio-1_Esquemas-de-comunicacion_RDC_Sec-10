@@ -1,7 +1,0 @@
-# Wireshark
-
-# Personal or temporary Wireshark files
-*.tmp
-*.log
-*.history
-*.sav

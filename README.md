@@ -41,6 +41,72 @@ La actividad muestra que toda comunicación necesita reglas compartidas para rep
 
 ---
 
+## Estructura del repositorio
+
+```text
+Laboratorio-1_Esquemas-de-comunicacion_RDC_Sec-10/
+│
+├── evidencias_lab1_22193/
+│   ├── 01_Wireshark_instalado_version.png
+│   ├── 02_Perfil_Pablo_Barillas.png
+│   ├── 03_Apertura_archivo_pcap.png
+│   ├── 04_Entorno_personalizado_hora.png
+│   ├── 05_Longitud_TCP_valores.png
+│   ├── 06_Configuracion_columna_tcp_len.png
+│   ├── 07_Diseno_paneles_no_predeterminado.png
+│   ├── 08_Regla_color_TCP_SYN.png
+│   ├── 09_Filtro_TCP_SYN_4_paquetes.png
+│   ├── 10_Interfaces_simplificadas_WiFi.png
+│   ├── 11_Ipconfig_all.png
+│   ├── 12_Ring_buffer_5MB_10_archivos.png
+│   ├── 13_Archivos_ring_buffer_generados.png
+│   ├── 14_Filtro_HTTP_mensajes.png
+│   ├── 15_Filtro_HTTP_request_response.png
+│   ├── 16_Solicitud_HTTP_version.png
+│   ├── 17_Respuesta_HTTP_200_OK.png
+│   ├── 18_Accept_Language.png
+│   └── 19_Content_Length_81_bytes.png
+│
+├── Instrucciones-del-laboratorio/
+│   └── Lab1 - Esquemas de comunicacion e Intro a Wireshark.pdf
+│
+├── Licencia/
+│   └── LICENSE
+│
+├── Primera-parte_Esquemas-de-comunicación/
+│   └── Reporte/
+│       ├── Reporte_Grupal_Laboratorio_1_Redes.docx
+│       └── Reporte_Grupal_Laboratorio_1_Redes.pdf
+│
+├── Segunda-parte_Introduccion-a-Wireshark/
+│   │
+│   ├── Archivo-Wireshark/
+│   │   └── intro-wireshark-trace1.pcap
+│   │
+│   ├── Captura_Inciso_3.6/
+│   │   └── lab1_22193_3_6_HTTP.pcapng
+│   │
+│   ├── Capturas_Incisos_3.4_al_3.5/
+│   │   ├── lab1_22193_20260710092830_00007.pcapng
+│   │   ├── lab1_22193_20260710092830_00008.pcapng
+│   │   ├── lab1_22193_20260710092831_00009.pcapng
+│   │   ├── lab1_22193_20260710092831_00010.pcapng
+│   │   ├── lab1_22193_20260710092831_00011.pcapng
+│   │   ├── lab1_22193_20260710092831_00012.pcapng
+│   │   ├── lab1_22193_20260710092832_00013.pcapng
+│   │   ├── lab1_22193_20260710092832_00014.pcapng
+│   │   ├── lab1_22193_20260710092833_00015.pcapng
+│   │   └── lab1_22193_20260710092833_00016.pcapng
+│   │
+│   └── reporte/
+│       ├── Informe_Individual_Laboratorio_1_Incisos_3.4_a_3.6_Pablo_Barillas.docx
+│       └── Informe_Individual_Laboratorio_1_Incisos_3.4_a_3.6_Pablo_Barillas.pdf
+│
+└── README.md
+```
+
+---
+
 ## Resultados principales
 
 | Indicador | Resultado | Interpretación |
